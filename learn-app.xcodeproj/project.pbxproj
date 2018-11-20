@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76291203E101ED1F5E0B61BC /* libPods-learn-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1CBC5FE849FD6EA9F0FE96 /* libPods-learn-app.a */; };
 		CFD8163521A3DF6F0098F526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD8163421A3DF6F0098F526 /* AppDelegate.m */; };
 		CFD8163821A3DF6F0098F526 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD8163721A3DF6F0098F526 /* ViewController.m */; };
 		CFD8163B21A3DF6F0098F526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD8163921A3DF6F0098F526 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1CBC5FE849FD6EA9F0FE96 /* libPods-learn-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-learn-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4692142C7D16E9853F3E93 /* Pods-learn-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-learn-app/Pods-learn-app.release.xcconfig"; sourceTree = "<group>"; };
 		CFD8163021A3DF6F0098F526 /* learn-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "learn-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD8163321A3DF6F0098F526 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CFD8163421A3DF6F0098F526 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		CFD8163F21A3DF6F0098F526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFD8164121A3DF6F0098F526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFD8164221A3DF6F0098F526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBD8030ECBCA328AF151C9C0 /* Pods-learn-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-learn-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-learn-app/Pods-learn-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76291203E101ED1F5E0B61BC /* libPods-learn-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61DD4632A6AC52D8294D5DCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBD8030ECBCA328AF151C9C0 /* Pods-learn-app.debug.xcconfig */,
+				AA4692142C7D16E9853F3E93 /* Pods-learn-app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CFD8162721A3DF6F0098F526 = {
 			isa = PBXGroup;
 			children = (
 				CFD8163221A3DF6F0098F526 /* learn-app */,
 				CFD8163121A3DF6F0098F526 /* Products */,
+				61DD4632A6AC52D8294D5DCC /* Pods */,
+				D8DDAF49F345153912B01935 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = "learn-app";
 			sourceTree = "<group>";
 		};
+		D8DDAF49F345153912B01935 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E1CBC5FE849FD6EA9F0FE96 /* libPods-learn-app.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFD8164621A3DF6F0098F526 /* Build configuration list for PBXNativeTarget "learn-app" */;
 			buildPhases = (
+				D6FE82108508C1913EE37526 /* [CP] Check Pods Manifest.lock */,
 				CFD8162C21A3DF6F0098F526 /* Sources */,
 				CFD8162D21A3DF6F0098F526 /* Frameworks */,
 				CFD8162E21A3DF6F0098F526 /* Resources */,
+				78ED21AB00B21C67E2A28CEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78ED21AB00B21C67E2A28CEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-learn-app/Pods-learn-app-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-learn-app/Pods-learn-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6FE82108508C1913EE37526 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-learn-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFD8162C21A3DF6F0098F526 /* Sources */ = {
@@ -283,6 +358,7 @@
 		};
 		CFD8164721A3DF6F0098F526 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBD8030ECBCA328AF151C9C0 /* Pods-learn-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +375,7 @@
 		};
 		CFD8164821A3DF6F0098F526 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4692142C7D16E9853F3E93 /* Pods-learn-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
